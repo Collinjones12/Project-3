@@ -75,4 +75,4 @@ def PlaneTrussStiffness( input_geometry):
 # Example_3_3.csv is textbook Example 3.3, which you can run right away to see
 # output from the code.
 # Modify the name of the file to operate on your truss of interest
-[nodes,bars]=PlaneTrussStiffness('Gabled_Howe_Six_Panel_Project2.csv')
+[nodes,bars]=PlaneTrussStiffness('Example_3_3.csv')
