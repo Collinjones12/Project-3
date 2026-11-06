@@ -46,14 +46,14 @@ def PlaneTrussStiffness( input_geometry):
     # Compute the unknown reactions
     F = PostprocessReactions(K, d, F, n_unknowns, nodes)
 
-    # Compute internal member loads
-    # ComputeMemberForces()
+    #Compute internal member loads
+    ComputeMemberForces(bars)
     
-    # Compute normal stresses of members
-    # ComputeNormalStresses()
+    #Compute normal stresses of members
+    ComputeNormalStresses(bars)
     
-    # Compute the critical buckling load of the members
-    # ComputeBucklingLoad()    
+    #Compute the critical buckling load of the members
+    ComputeBucklingLoad(bars)    
     
     # output data for sanity check
     for node in nodes:
@@ -75,4 +75,4 @@ def PlaneTrussStiffness( input_geometry):
 # Example_3_3.csv is textbook Example 3.3, which you can run right away to see
 # output from the code.
 # Modify the name of the file to operate on your truss of interest
-[nodes,bars]=PlaneTrussStiffness('Example_3_3.csv')
+[nodes,bars]=PlaneTrussStiffness('Gabled_Howe_Six_Panel_Project2.csv')
